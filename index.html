@@ -61,11 +61,17 @@
       </div>
     </div>
     <div class="buttons">
+      <button onclick="chooseExampleFile()">Choose Example</button>
       <button onclick="convertHtml2JsonAndSet()">Convert to JSON</button>
-      <button onclick="showExample1()">Input Example 1</button>
-      <button onclick="showExample2()">Input Example 2</button>
       <button onclick="runTests()">Run All Tests</button>
     </div>
+    <input
+      type="file"
+      id="example-file-input"
+      accept=".html"
+      style="display: none"
+      onchange="loadExampleFile(event)"
+    />
     <pre id="test-results"></pre>
   </body>
 </html>

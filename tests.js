@@ -309,6 +309,64 @@ var TEST_CASES = [
       return { pass: true, message: "" };
     },
   },
+  {
+    name: "16 boolean and unquoted attributes",
+    html: '<input type=text value=42 disabled>',
+    expected: {
+      type: "root",
+      children: [
+        {
+          type: "element",
+          tag: "input",
+          attributes: { type: "text", value: "42", disabled: "" },
+          children: [],
+        },
+      ],
+    },
+  },
+  {
+    name: "17 numeric entity and stray closing tag",
+    html: "<p>Registered trademark: &#174;</p></div>",
+    expected: {
+      type: "root",
+      children: [
+        {
+          type: "element",
+          tag: "p",
+          attributes: {},
+          children: [
+            { type: "text", content: "Registered trademark: ®" },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    name: "18 uppercase tag and attribute name normalization",
+    html: '<DIV CLASS="x">Hello</DIV>',
+    expected: {
+      type: "root",
+      children: [
+        {
+          type: "element",
+          tag: "div",
+          attributes: { class: "x" },
+          children: [{ type: "text", content: "Hello" }],
+        },
+      ],
+    },
+  },
+  {
+    name: "19 void element does not swallow following text",
+    html: "<br>text after",
+    expected: {
+      type: "root",
+      children: [
+        { type: "element", tag: "br", attributes: {}, children: [] },
+        { type: "text", content: "text after" },
+      ],
+    },
+  },
 ];
 
 function runTests() {
