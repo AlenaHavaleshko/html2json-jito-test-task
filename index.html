@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML to JSON</title>
     <script src="html2json.js"></script>
+    <script src="tests.js"></script>
     <style>
       h1 {
         font-family: sans-serif
@@ -63,7 +64,9 @@
       <button onclick="convertHtml2JsonAndSet()">Convert to JSON</button>
       <button onclick="showExample1()">Input Example 1</button>
       <button onclick="showExample2()">Input Example 2</button>
+      <button onclick="runTests()">Run All Tests</button>
     </div>
+    <pre id="test-results"></pre>
   </body>
 </html>
 
