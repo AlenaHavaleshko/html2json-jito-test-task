@@ -32,3 +32,14 @@ Before submitting your final results, double or even triple-check everything:
 - Jito’s senior developer will thoroughly review your solution. Based on this review, if deemed appropriate, you may be invited for a technical code review. This will include questions about the code, your understanding, and the reasoning behind your solution choices.
 - The best indicator that you’ve done your best is the feeling of confidence when submitting, knowing that you have thoroughly checked your work and cannot think of anything more to improve.
 - You can view test task template [here](https://jito-dev.github.io/jito-intern-test-task/)
+
+## ### How to use
+
+1. Open `index.html`.
+2. Enter HTML into the input field or choose an HTML file.
+3. Click **Convert to JSON** to see the result.
+4. Run the tests to check that `html2json` produces the expected JSON for different HTML cases.
+5. All tests should pass before considering the implementation complete.
+
+The tests are used to verify the expected behavior of the parser and to catch regressions or edge cases.
+
