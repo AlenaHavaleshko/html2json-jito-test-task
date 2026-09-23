@@ -33,7 +33,7 @@ Before submitting your final results, double or even triple-check everything:
 - The best indicator that you’ve done your best is the feeling of confidence when submitting, knowing that you have thoroughly checked your work and cannot think of anything more to improve.
 - You can view test task template [here](https://jito-dev.github.io/jito-intern-test-task/)
 
-## ### How to use
+## How to use
 
 1. Open `index.html`.
 2. Enter HTML into the input field or choose an HTML file.
